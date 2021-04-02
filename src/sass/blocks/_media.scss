@@ -40,6 +40,27 @@
             padding: 0 30px;
         }
     }
+    .portfolio {
+        &__wrapper {
+            grid-template-columns: repeat(auto-fit, 280px);
+            grid-auto-rows: 280px;
+            justify-content: space-around;
+            row-gap: 20px;
+            .horizontal, .vertical {
+                grid-row: unset;
+                grid-column: unset;
+            }
+        }
+    }
+    .contacts {
+        &__wrapper {
+            padding: 0;
+            grid-template-columns: 400px 520px;            
+        }
+        &__form {
+            grid-template: 45px 190px 45px / repeat(2, 250px);
+        }
+    }
 }
 
 @media (max-width: 992px) {
@@ -84,6 +105,24 @@
             }
         }
     }
+    .price {
+        &__wrapper {
+            padding: 0;
+            grid-template-columns: repeat(auto-fit, 350px);
+        }
+    }
+    .contacts {
+        &__wrapper {            
+            grid-template-columns: 300px 400px;            
+        }
+        &__form {
+            grid-template: 45px 190px 45px / repeat(2, 195px);
+        }
+        &__btn {
+            line-height: 16px;
+            padding: 8px 25px;
+        }
+    }
 }
 
 @media (max-width: 768px) {
@@ -117,6 +156,9 @@
                 column-gap: 20px;
             }
         }
+        .portfolio {
+            padding-top: 40px;
+        }
     }
     .resume {
         padding-top: 40px;
@@ -141,6 +183,26 @@
             &-line {
                 width: 100%;
             }
+        }
+        
+    }
+    .price {
+        padding-top: 40px;
+        &__wrapper {
+            margin-top: 20px;
+            justify-content: center;
+        }        
+    }
+    .contacts {
+        padding-top: 40px;
+        &__photo {
+            display: none;
+        }
+        &__wrapper {            
+            grid-template-columns: 1fr;            
+        }
+        &__form {
+            grid-template: 45px 190px 45px / repeat(2, 250px);
         }
     }    
 }
@@ -195,5 +257,15 @@
             grid-template-columns: repeat(auto-fit, 300px);
         }
     }
-
+    .price {        
+        &__wrapper {
+            grid-template-columns: repeat(auto-fit,295px);
+        }
+    }
+    .contacts {
+        padding-bottom: 50px;
+        &__form {
+            grid-template: 45px 45px 190px minmax(45px, auto) / 1fr;
+        }        
+    }
 }
